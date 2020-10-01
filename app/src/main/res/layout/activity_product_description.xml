@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:forceDarkAllowed="false"
+    android:theme="@style/AppTheme"
+    tools:context=".ProductDescriptionActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#CB8EF9"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/colorAccent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        android:layout_marginTop="70dp"
+        android:layout_weight="1" />
+    <ProgressBar
+        android:id="@+id/loading_product"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="70dp"
+        android:indeterminate="true"
+        android:indeterminateTint="#CB8EF9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/success_text" />
+    <TextView
+        android:id="@+id/loading_text_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="160dp"
+        android:text="Searching Product details..."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loading_product" />
+
+
+</FrameLayout>

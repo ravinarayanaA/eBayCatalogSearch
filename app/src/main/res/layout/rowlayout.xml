@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="204dp"
+    android:layout_height="326dp"
+    android:layout_marginBottom="1dp"
+    android:background="#F7F4F4">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="189dp"
+        android:layout_height="314dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/image_container"
+            android:layout_width="190dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            >
+
+            <!-- Put your widgets inside this RelativeLayout. -->
+
+        </ImageView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="174dp"
+            android:layout_height="132dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="153dp"
+            android:layout_marginBottom="37dp">
+
+            <TextView
+                android:id="@+id/info_text"
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="#141313"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Put your widgets inside this RelativeLayout. -->
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/shipping_price"
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_text">
+
+                <!-- Put your widgets inside this RelativeLayout. -->
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/top_rated"
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shipping_price"
+                tools:visibility="gone">
+
+                <!-- Put your widgets inside this RelativeLayout. -->
+
+            </TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/footer_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|left"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+
+            <!-- The footer view will grow to fit as much content as possible while the
+                 timestamp view keeps a fixed width. If the footer text is too long, it
+                 will be ellipsized with a 40px margin between it and the timestamp. -->
+
+            <TextView
+                android:id="@+id/condition"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="126dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAlignment="textEnd"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#84AB57"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
